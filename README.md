@@ -53,7 +53,7 @@ On considère une cavité de volume **V** surmontée d'un col de longueur **L** 
 | $Ma$       | Masse sonore             | $kg.m^{-4}$            |
 | $Ra$       | Résistance sonore        | $kg.s^{-1}.m^{-4}$ |
 | $Ca$       | Capacité sonore          | $m^4.s^2.kg^{-1}$ |
-| $\omega_0$ | Pulsation propre         | $rad\.s^{-1}$           |
+| $\omega_0$ | Pulsation propre         | $rad.s^{-1}$           |
 | $f_0$      | Fréquence propre         | $Hz$                       |
 | $Q$        | Facteur de qualité       | -                          |
 
