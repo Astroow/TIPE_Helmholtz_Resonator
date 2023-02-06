@@ -17,24 +17,29 @@
   - [Résultat](#simres)
 
 <h4 id="intro"></h4>
+
 # Introduction
 
 On étudie l'influence du résonateur de Helmholtz pour la réduction de bruit.
 
 <h4 id="pres"></h4>
+
 ## Présentation du dispositif
 
 On considère une cavité de volume **V** surmontée d'un col de longueur **L** et de surface **A**.
 
-> ![resonateur](https://upload.wikimedia.org/wikipedia/commons/1/1a/Helmholtz_Resonator.png)
+> ![resonateur](https://upload.wikimedia.org/wikipedia/commons/1/1a/Helmholtz_Resonator.png) \
 > *Résonateur de Helmholtz*
 
 <h4 id="hypotheses"></h4>
+
 ## Hypothèses
+
 - Les longueurs d'ondes misent en jeu sont __grandes__ devant les dimensions du résonateur.
 - Les gaz sont considérés __parfaits__.
 
 <h4 id="grandeurs"></h4>
+
 ## Grandeurs et notations
 
 
@@ -43,28 +48,31 @@ On considère une cavité de volume **V** surmontée d'un col de longueur **L** 
 | $V$        | Volume de la cavité      | $m^3$                      |
 | $L$        | Longueur du col          | $m$                        |
 | $A$        | Surface du col           | $m^2$                      |
-| $\rho$     | Masse volumique de l'air | $kg\dot m^3$               |
-| $U$        | Débit                    | $m^3\dot s^{-1}$           |
-| $Ma$       | Masse sonore             | $kg\dot m^{-4}$            |
-| $Ra$       | Résistance sonore        | $kg\dot s^{-1}\dot m^{-4}$ |
-| $Ca$       | Capacité sonore          | $m^4\dot s^2 \dot kg^{-1}$ |
-| $\omega_0$ | Pulsation propre         | $rad\dot s^{-1}$           |
+| $\rho$     | Masse volumique de l'air | $kg.m^3$                   |
+| $U$        | Débit                    | $m^3.s^{-1}$           |
+| $Ma$       | Masse sonore             | $kg.m^{-4}$            |
+| $Ra$       | Résistance sonore        | $kg.s^{-1}.m^{-4}$ |
+| $Ca$       | Capacité sonore          | $m^4.s^2.kg^{-1}$ |
+| $\omega_0$ | Pulsation propre         | $rad\.s^{-1}$           |
 | $f_0$      | Fréquence propre         | $Hz$                       |
 | $Q$        | Facteur de qualité       | -                          |
 
 <h4 id="modele"></h4>
+
 # Modélisation physique
 
 <h4 id="analytique"></h4>
+
 ## Etude analytique du dispositif
-On fait, en première approximation une hypothèse supplémentaire sur notre dispositif qui est que __toutes les transformations sont considérées isentropiques__.
+
+On fait, en première approximation une hypothèse supplémentaire sur notre dispositif qui est que __toutes les transformations seront considérées isentropiques__.
 
 On fait un bilan des forces exercées sur le col du résonateur :
 
-- $ \vec{F_{air/col}} = p_{0}A\vec x$
-- $\vec{F_{enceinte/col}} = p_1A$
+- $\vec{F_{air/col}} = p_{0}A \vec x $
+- $\vec{F_{enceinte/col}} = -p_1A \vec x$
 
-On applique le principe fondamental de la dynamique au col et on a en projettant sur l'axe x :
+On applique le principe fondamental de la dynamique au col et on a en projettant sur l'axe $x$ :
 
 $$
 \rho V \ddot{x}= (p_0-p_1)A \tag{1}
@@ -82,7 +90,7 @@ $$
 p_0 = p_1(\frac{1}{1-\frac{Ax}{V}})^\gamma \tag{3}
 $$
 
-Or $Ax \ll V$donc après un développement limité à l'ordre 1, on a $p_0 = p_1(1+\gamma\frac{Ax}{V})$
+Or $Ax \ll V$ donc après un développement limité à l'ordre 1, on a $p_0 = p_1(1+\gamma\frac{Ax}{V})$
 
 Donc, on obtient l'équation différentielle suivante :
 
@@ -100,7 +108,9 @@ où $\omega_0^2 = \frac{p_1\gamma A^2}{\rho V^2}$
 
 De plus $c^2 = \frac{\gamma p_1}{\rho}$ et donc finalement $\omega_0^2 = \frac{cA}{V}^2 = \frac{c^2A}{VL}$.
 
-Cette modélisation bien que très grossière est souvent suffisante lorsque l'amortissement est faible. Cependant, pour une utilisation opérationnelle du résonateur, on s'attendrait à trouver un terme de dérivée d'ordre 1 représentant l'amortissement.
+Cette modélisation bien que très grossière est souvent suffisante lorsque l'amortissement est faible.
+Cependant, pour une utilisation opérationnelle du résonateur, on s'attendrait à trouver un terme de dérivée d'ordre 1 représentant l'amortissement.
+
 La modélisation précédente nous a tout de même permise de mettre en évidence une analogie avec les systèmes masses-ressorts.
 De fait, il reste à tenir compte de la dissipation : comme le goulot est beaucoup plus étroit que la cavité, c'est là que la dissipation est la plus importante ; et comme c'est surtout l'effet d'inertie qui est important dans le goulot, il suffit d'ajouter une résistance en série dans le circuit fictif équivalent.
 
