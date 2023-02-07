@@ -7,14 +7,14 @@
 - [Mise en œuvre expérimentale](#exp)
   - [Expérience 1](#exp1)
     - [Présentation](#pres1)
-    - [Résultat](#res1)
+    - [Résultats](#res1)
   - [Expérience 2](#exp2)
     - [Présentation](#pres2)
-    - [Résultat](#res2)
+    - [Résultats](#res2)
 - [Simulation numérique](#sim)
   - [Présentation](#simpres)
   - [Simulation](#simsim)
-  - [Résultat](#simres)
+  - [Résultats](#simres)
 
 <h4 id="intro"></h4>
 
@@ -28,7 +28,7 @@ On étudie l'influence du résonateur de Helmholtz pour la réduction de bruit.
 
 On considère une cavité de volume **V** surmontée d'un col de longueur **L** et de surface **A**.
 
-> ![resonateur](https://upload.wikimedia.org/wikipedia/commons/1/1a/Helmholtz_Resonator.png) \
+> ![Helmholtz_Resonator.png](assets/helmholtz_resonator.png)
 > *Résonateur de Helmholtz*
 
 <h4 id="hypotheses"></h4>
@@ -43,19 +43,19 @@ On considère une cavité de volume **V** surmontée d'un col de longueur **L** 
 ## Grandeurs et notations
 
 
-| Symbole    | Signification            | Unité                      |
-|------------|--------------------------|----------------------------|
-| $V$        | Volume de la cavité      | $m^3$                      |
-| $L$        | Longueur du col          | $m$                        |
-| $A$        | Surface du col           | $m^2$                      |
-| $\rho$     | Masse volumique de l'air | $kg.m^3$                   |
-| $U$        | Débit                    | $m^3.s^{-1}$           |
-| $Ma$       | Masse sonore             | $kg.m^{-4}$            |
-| $Ra$       | Résistance sonore        | $kg.s^{-1}.m^{-4}$ |
-| $Ca$       | Capacité sonore          | $m^4.s^2.kg^{-1}$ |
-| $\omega_0$ | Pulsation propre         | $rad.s^{-1}$           |
-| $f_0$      | Fréquence propre         | $Hz$                       |
-| $Q$        | Facteur de qualité       | -                          |
+| Symbole    | Signification            | Unité             |
+| ---------- | ------------------------ | ------------------ |
+| $V$        | Volume de la cavité     | $m^3$              |
+| $L$        | Longueur du col          | $m$                |
+| $A$        | Surface du col           | $m^2$              |
+| $\rho$     | Masse volumique de l'air | $kg.m^3$           |
+| $U$        | Débit                   | $m^3.s^{-1}$       |
+| $Ma$       | Masse sonore             | $kg.m^{-4}$        |
+| $Ra$       | Résistance sonore       | $kg.s^{-1}.m^{-4}$ |
+| $Ca$       | Capacité sonore         | $m^4.s^2.kg^{-1}$  |
+| $\omega_0$ | Pulsation propre         | $rad.s^{-1}$       |
+| $f_0$      | Fréquence propre        | $Hz$               |
+| $Q$        | Facteur de qualité      | -                  |
 
 <h4 id="modele"></h4>
 
@@ -126,9 +126,58 @@ $$
 \frac{d^2U}{dt^2} + \frac{\omega_0}{Q}\frac{dU}{dt} + w_0^2U(t) = 0 \tag{7}
 $$
 
-où on a $f_0 = \frac{1}{2\pi}\sqrt{\frac{1}{M_aC_a}} = \frac{c_0}{2\pi}\sqrt{\frac{S}{lV}}$ et $Q = \frac{1}{R_a}\sqrt{\frac{M_a}{C_a}} = \frac{\rho}{R_a}\sqrt{\frac{l}{SV}}$
+où on a :
+
+$$
+f_0 = \frac{1}{2\pi}\sqrt{\frac{1}{M_aC_a}} = \frac{c_0}{2\pi}\sqrt{\frac{S}{lV}} \tag{8}
+$$
+
+
+$$
+Q = \frac{1}{R_a}\sqrt{\frac{M_a}{C_a}} = \frac{\rho}{R_a}\sqrt{\frac{l}{SV}} \tag{9}
+$$
+
 
 On a donc mis en évidence une fréquence propre de résonnance et un facteur de qualité qui ont les propriétés suivantes :
 
 - La fréquence propre du résonnateur dépend exclusivement de sa géométrie
 - Le facteur de qualité est inversement proportionnel aux frottements fluides du système
+
+<h4 id="exp"></h4>
+
+# Mise en oeuvre expérimentale
+
+<h4 id="exp1"></h4>
+
+## Expérience 1
+
+<h4 id="pres1"></h4>
+
+### Présentation
+
+Dans cette expérience, on cherche à mettre en évidence un phénomène de résonnance au voisinage de la fréquence propre du dispositif.
+
+En premier lieu, on réalise une mesure de la fréquence propre du résonateur. Pour ce faire, on excite de proche le col et on enregistre la réponse en faisant une analyse de Fourier, on obtient :
+
+> ![frequence1](assets/frequence_1.png)
+>
+> *On obtient donc une fréquence propre expérimentale $f_{0, e} = 210Hz$*
+
+On réalise le montage suivant :
+
+> ![IMG_0091.jpeg](assets/montage_1.jpeg)
+>
+> *Montage expérience 1*
+
+où les dimensions du résonateur sont les suivantes:
+
+
+| V ($m^3$)     | A ($m^2$) | L ($m$)                 |
+| -------------- | --------- | ----------------------- |
+| C'est pas cool | d'oublier | le résonateur chez soi |
+
+En utilisant **(8)** on en déduit la fréquence propre théorique du résonateur qui vaut: $f_{0, t} = Mais oui c'est clair!$.
+
+<h4 id="res1"></h4>
+
+### Résultats
